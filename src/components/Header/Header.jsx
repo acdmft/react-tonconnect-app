@@ -3,6 +3,7 @@ import { TonConnectButton } from "@tonconnect/ui-react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Header.css";
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,33 +23,58 @@ const Header = () => {
           </Link>
         </div>
 
-
         {/* TonConnectButton */}
         <div className="flex md:w-1/3 w-content px-4 items-center justify-between md:justify-around">
           <TonConnectButton />
-        {/* Hamburger Menu for small screens */}
-        
+          {/* Hamburger Menu for small screens */}
+
           <div className="md:hidden burger-menu">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle Menu"
               className=" ml-8"
             >
-             {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} /> } 
+              {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
           </div>
-        
+
           {/* Desktop Navigation */}
           <ul className="hidden md:flex w-1/4 justify-around space-x-8 items-center">
             <li>
-              <Link to="/" 
-              className={`${location.pathname === "/" ? "underline underline-offset-4": ""}`}>Home</Link>
+              <Link
+                to="/"
+                className={`${
+                  location.pathname === "/"
+                    ? "underline underline-offset-4"
+                    : ""
+                }`}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/sale" className={`${location.pathname === "/sale" ? "underline underline-offset-4": ""}`}>Sale</Link>
+              <Link
+                to="/sale"
+                className={`${
+                  location.pathname === "/sale"
+                    ? "underline underline-offset-4"
+                    : ""
+                }`}
+              >
+                Sale
+              </Link>
             </li>
             <li>
-              <Link to="/contact" className={`${location.pathname === "/contact" ? "underline underline-offset-4": ""}`}>Contact</Link>
+              <Link
+                to="/contact"
+                className={`${
+                  location.pathname === "/contact"
+                    ? "underline underline-offset-4"
+                    : ""
+                }`}
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -56,19 +82,44 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div className={`menu ${isMenuOpen ? "menu-opened" : "menu-closed"}`}>
+        <div className="bg-white p-4">
+          <LanguageSelector />
+        </div>
         <ul className="flex flex-col bg-white items-center space-y-4 py-4">
           <li>
-            <Link to="/" onClick={() => setIsMenuOpen(false)} className={`${location.pathname === "/" ? "underline underline-offset-4": ""}`}>
+            <Link
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+              className={`${
+                location.pathname === "/" ? "underline underline-offset-4" : ""
+              }`}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link to="/sale" onClick={() => setIsMenuOpen(false)} className={`${location.pathname === "/sale" ? "underline underline-offset-4": ""}`}>
+            <Link
+              to="/sale"
+              onClick={() => setIsMenuOpen(false)}
+              className={`${
+                location.pathname === "/sale"
+                  ? "underline underline-offset-4"
+                  : ""
+              }`}
+            >
               Sale
             </Link>
           </li>
           <li>
-            <Link to="/contact" onClick={() => setIsMenuOpen(false)} className={`${location.pathname === "/contact" ? "underline underline-offset-4": ""}`}>
+            <Link
+              to="/contact"
+              onClick={() => setIsMenuOpen(false)}
+              className={`${
+                location.pathname === "/contact"
+                  ? "underline underline-offset-4"
+                  : ""
+              }`}
+            >
               Contact
             </Link>
           </li>

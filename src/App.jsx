@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import LanguageSelector from "./components/LanguageSelector/LanguageSelector";
 
 function App() {
   const manifestUrl = import.meta.env.VITE_MANIFEST_URL;
@@ -135,6 +136,12 @@ function App() {
       <Router>
         <div className="App">
           <Header />
+          <div className="h-8 hidden md:block ">
+            <div className="float-right mr-4">
+
+            <LanguageSelector />
+            </div>
+          </div>
           <main className="min-h-screen">
             <Routes>
               <Route path="/" element={<Home />} />
