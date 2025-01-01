@@ -1,11 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { LanguageContext } from "../context/LanguageContext";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const navigate = useNavigate();
   const handleRedirect= () => {
     navigate("/sale");
   }
+  const { t } = useTranslation();
+
 
   return (
     <div className="container mx-auto p-4 lg:w-1/2 md:w-2/3 sm:w-full">
@@ -16,6 +20,7 @@ const Home = () => {
         <h2 className="text-2xl sm:text-3xl font-semibold text-center">
           New Digital Era opportunities.
         </h2>
+        <p className="text-lg text-rose-500">{t('welcome')}</p>
         <p className="text-base sm:text-lg md:text-xl text-gray-700 text-justify">
           In today’s rapidly advancing digital landscape, innovative businesses
           must harness the full potential of internet technologies to stay

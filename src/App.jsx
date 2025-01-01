@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   const manifestUrl = import.meta.env.VITE_MANIFEST_URL;
+  
   return (
     <TonConnectUIProvider
       manifestUrl={manifestUrl}
