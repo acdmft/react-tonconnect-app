@@ -1,4 +1,31 @@
 {
-    "line1": "Welcome to my new project",
-    "welcome": "Helloooo!"
+    "home": {
+        "heading1": "Legendary NFT",
+        "heading2": "The great storm",
+        "heading3": "A new chapter",
+        "heading4": "Our manifesto",
+        "heading5": "The true story starts with you",
+        "paragraph1": "Flying Fox Crypto began as an NFT collection in 2021. Shortly after their conception FFXC became an instant sensation during the beginnings of the NFT craze with prints in the New York Times, features on CNBC, and Memes that took over the internet. Today, Flying Fox Crypto have established themselves as the strongest community in           crypto and the FFX has evolved into a global cultural phenomenon.",
+        "paragraph2": "However, the FFX's story wasn’t always one of success and positivity. After the initial hype, Flying Fox Crypto faced a challenging period, dubbed the “great storm. For six months, they were mocked by  established NFT projects, becoming the laughingstock of the crypto community and dismissed as a fleeting trend. This harsh reality        caused the community to revolt, forcing a community-led takeover that      redirected FFX tokens towards greatness.",
+        "paragraph3": "This moment in history ultimately led the Flyin Foxes        Crypto to become the most successful CTO (Community Takeover) of all      time. FFXC represents a lot of things, from universal appeal to memetic culture, but at its core, FFXC is a symbol of the underdog, the little guy who everyone counted out, but triumphed against all odds.",
+        "paragraph4": "By holding FFXC you become a beacon of memetic culture, a spreader of good vibes, and an active participant in this remarkable underdog story. FFXC is the token for the people, by the people and serves as a  way for the ever-expanding group of 100s of millions of Flying Fox    Crypto fans to align themselves with the story and future of FFX        tokens.",
+        "paragraph5": {
+            "part1": "The story told above is actually a story of the",
+            "part2": "This project aims to invite investors, crypto enthusiasts and developers to the magic Web 3.0 world. It has these features:",
+            "bold1": "Learning and Development:",
+            "bold2": "Scalable Solution:",
+            "bold3": "Community Collaboration:",
+            "feature1": "Ideal for those looking to explore blockchain technology and token distribution models",
+            "feature2": "Built on the TON Blockchain, known for its high performance and decentralized nature.",
+            "feature3": "Welcoming contributions and testing from developers and blockchain enthusiasts worldwide."
+        },
+        "paragraph6": {
+            "part1": "By the way. The token is real, you can buy",
+            "bold1": "1 nano FFXC",
+            "bold2": "nanoton."
+        },
+        "buy_btn": "Buy now"
+
+    },
+    "":""
 }
