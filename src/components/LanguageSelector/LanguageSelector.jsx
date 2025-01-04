@@ -2,10 +2,6 @@ import { LanguageContext } from "../../context/LanguageContext";
 import { useContext } from "react";
 
 export default function LanguageSelector() {
-  const languageOptions = [
-    { lng: "English", code: "en" },
-    { lng: "Russian", code: "ru" },
-  ];
   const { language, changeLanguage, availableLanguages } = useContext(LanguageContext);
   console.log('language ', language)
   const sortedLanguages = [

@@ -1,18 +1,20 @@
-import React from "react";
+import React, {useContext} from "react";
 import { FaDiscord, FaTelegram, FaGithub } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import { LanguageContext } from "../context/LanguageContext";
 
 const Contact = () => {
+  const { language } = useContext(LanguageContext);
+  const { t } = useTranslation();
   return (
     <div>
       <div className="container mx-auto p-4 lg:w-1/2 md:w-2/3 sm:w-full">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold my-8 text-center">
-          Contact Page
+        <h1 className={` ${language === 'en' ? 'jolly-lodger-regular': 'neucha-regular'} text-6xl leading-normal sm:text-5xl md:text-9xl font-bold  mb-8 text-center my-8`}>
+          {t('contact.heading')}
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-gray-700 text-justify"> 
-          Use one of the provided links to contact me. If you encountered
-          troubles during exchange ton by jettons please send me{" "}
-          <b>msg_hash, tx_hash</b> and optionally<b> transaction time</b> and{" "}
-          <b>sent comment.</b>
+        <p className={`${language === 'en' ? 'fredoka-regular' : 'balsamiq-sans-regular '} tracking-wide text-base sm:text-lg md:text-xl text-gray-700 text-justify`}> 
+          {t('contact.message')}{" "}
+          <b>{t('sale.sent_msg_hash')}, {t('sale.sent_msg_hash')}</b> {t('contact.message_end')}.
         </p>
       </div>
       <div className="flex  justify-center flex-col items-start w-1/2 md:w-full mx-auto md:flex-row ">

@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Header.css";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
+import { useTranslation } from "react-i18next";
+import { LanguageContext } from "../../context/LanguageContext";
+
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
+  const { language } = useContext(LanguageContext);
+  const { t } = useTranslation();
+  useEffect(()=>{
+    setIsMenuOpen(false);
+  },[language]);
 
+  const location = useLocation();
   return (
     <header className="bg-white shadow-md">
       <nav className="flex items-center justify-between h-16 px-4 md:px-8">
@@ -49,7 +58,7 @@ const Header = () => {
                     : ""
                 }`}
               >
-                Home
+                {t('menu.home')}
               </Link>
             </li>
             <li>
@@ -61,7 +70,7 @@ const Header = () => {
                     : ""
                 }`}
               >
-                Sale
+                {t('menu.sale')}
               </Link>
             </li>
             <li>
@@ -73,7 +82,7 @@ const Header = () => {
                     : ""
                 }`}
               >
-                Contact
+                {t('menu.contact')}
               </Link>
             </li>
           </ul>

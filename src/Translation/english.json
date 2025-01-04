@@ -27,5 +27,35 @@
         "buy_btn": "Buy now"
 
     },
-    "":""
+    "sale":{
+        "heading": " Sale Page",
+        "item1": "1. Connect your wallet using 'Connect Wallet' button.",
+        "item2": {"start": " 2. Insert the amount of jettons you want to exchange for tons in the field below", "em": "( for example 0.1 is equal to 1000 000 00 nanojettons )"},
+        "item3": "3. Press the 'Send ton' button and then go to your ton wallet and confirm the transfer, in few seconds you will recieve corresponding amount of tons. Maybe you will need to refresh your wallet to make tokens appear on the token page. In the case of problems contact administrator. ",
+        "price_info": {"1": "The price of ", "2": "For the storage and gas fees you will also have to spend about ", "3":", more about the fees in ton you can read"},
+        "caution": "Be aware of scum and phishing. Everything in the cryptocurrency sphere requires payment of commission to miners, validators etc. So if you recieve later the proposition of free tokens that needs some confirmation this is for sure a scum.",
+        "loading": "Loading...",
+        "sent": "Sent",
+        "minter_address": "Minter address",
+        "sent_msg_hash": "Sending Tx Message Hash",
+        "sent_tx_hash": "Sending Tx Hash"
+    },
+    "contact": {
+        "heading": "Contact Page",
+          "message": "Use one of the provided links to contact me. If you've encountered troubles during exchange tons for jettons please send me",
+          "message_end": "and optionally transaction time"
+    },
+    "elements": {
+        "nanoton": "nanoton",
+        "nanojetton": "nanojetton",
+        "ton": "ton",
+        "here": "here",
+        "buy_btn": "Buy FFXC",
+        "connect_btn": "Connect your wallet"
+    },
+    "menu": {
+        "home": "Home",
+        "sale": "Sale",
+        "contact": "Contact"
+    }
 }

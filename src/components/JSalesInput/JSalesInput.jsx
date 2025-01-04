@@ -3,6 +3,7 @@ import { useTonConnectUI, useTonWallet } from "@tonconnect/ui-react";
 import { useTonClient } from "../../hooks/useTonClient";
 import AddressDisplay from "./AddressDisplay";
 import { useTonTransaction } from "../../hooks/useTonTransaction";
+import { useTranslation } from "react-i18next";
 
 export default function JSalesInput() {
   const [jettonAmount, setJettonAmount] = useState(0);
@@ -25,6 +26,7 @@ export default function JSalesInput() {
   const wallet = useTonWallet();
   const [tonConnectUi] = useTonConnectUI();
 
+  const { t } = useTranslation();
   // CALCULATE TON AMOUNT
   useEffect(() => {
     const totalPrice = (jettonAmount * oneJettonPrice) + parseFloat(fees);
@@ -55,7 +57,7 @@ export default function JSalesInput() {
           className="w-24 h-24 rounded-full object-cover mb-2"
         />
         <span className="text-sm text-gray-400 font-semibold">
-          Minter address:
+          {t('sale.minter_address')}:
         </span>
         <div className="text-gray-700 text-lg font-semibold text-center">
           <AddressDisplay address={minterAdminAddr} />
@@ -92,12 +94,14 @@ export default function JSalesInput() {
           }`}
         >
           {loading ? (
-            "Loading..."
+            <>
+            {t('sale.loading')}
+            </>
           ) : (
             <>
-              Send{" "}
+              {t('sale.sent')}{" "}
               <span className="text-yellow-300 font-bold">{tonsToDisplay}</span>{" "}
-              ton
+              {t('elements.ton')}
             </>
           )}
         </button>
@@ -106,7 +110,7 @@ export default function JSalesInput() {
           onClick={() => tonConnectUi.openModal()}
           className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
-          Connect wallet to send the transaction
+          {t('elements.connect_btn')}
         </button>
       )}
 
@@ -114,13 +118,13 @@ export default function JSalesInput() {
       {msgHash ? (
         <>
           <div className="mt-4">
-            <p className="text-gray-400 font-bold">Sending Tx Message Hash:</p>
+            <p className="text-gray-400 font-bold">{t('sale.sent_msg_hash')}:</p>
             <p className="break-words">{msgHash}</p>
           </div>
           {finalizedTx ? (
             <>
               <div className="mt-2">
-                <p className="text-gray-400 font-bold">Sending Tx Hash:</p>
+                <p className="text-gray-400 font-bold">{t('sale.sent_tx_hash')}:</p>
                 <p className="break-words">
                   {finalizedTx?.hash().toString("hex")}
                 </p>

@@ -11,7 +11,7 @@ const Home = () => {
   };
   const { t } = useTranslation();
  const { language } = useContext(LanguageContext);
- console.log('language ',language);
+ 
   return (
     <div className="container mx-auto p-4 lg:w-1/2 md:w-2/3 sm:w-full">
       <div className="my-6">
@@ -75,7 +75,7 @@ const Home = () => {
           onClick={handleRedirect}
           className="w-content bg-blue-500 hover:bg-blue-700 text-xl sm:text-2xl text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
-          {t('home.buy_btn')}
+          {t('elements.buy_btn')}
         </button>
       </div>
       <div className="h-24"></div>
