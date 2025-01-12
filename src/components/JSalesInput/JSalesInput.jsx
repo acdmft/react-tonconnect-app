@@ -21,7 +21,7 @@ export default function JSalesInput() {
   } = useTonTransaction();
   const { client } = useTonClient();
   const oneJettonPrice = import.meta.env.VITE_JETTON_PRICE; // 1 nanoJetton = 1 nanoton
-  const minterAdminAddr = import.meta.env.VITE_MINTER_ADMIN_ADDRESS;
+  const minterAdminAddr = import.meta.env.VITE_JETTON_MINTER_ADDRESS;
   const fees = import.meta.env.VITE_FORWARD_FEE;
   const wallet = useTonWallet();
   const [tonConnectUi] = useTonConnectUI();

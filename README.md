@@ -15,7 +15,7 @@ After connecting ton wallet with the help of [@tonconnect/ui-react sdk](https://
 ```
 VITE_MANIFEST_URL=https://ffxcrypto.vercel.app/tonconnect-manifest.json
 https://ton-connect.github.io/demo-dapp-with-react-ui/tonconnect-manifest.json
-VITE_MINTER_ADMIN_ADDRESS=EQC_wf-PEh2nC6Ltn-hCkV-KXDKqJZcqbkZIxco-eU1fdmGv
+VITE_JETTON_MINTER_ADDRESS=EQANxx5M68Y-Y40YlRKHJWVwYidcii6P7sZ266DUuwovM_f5
 VITE_JETTON_PRICE=0.005
 VITE_API_BASE_URL=http://localhost:3000/api
 VITE_FORWARD_FEE=0.08
