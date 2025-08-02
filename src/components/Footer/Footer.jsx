@@ -16,6 +16,9 @@ function Footer() {
             Creative Commons Attribution 4.0 International
           </a>
         </p>
+        <p>
+          version: 0.01
+        </p>
 
         {/* Social Media Icons */}
         <div className="flex space-x-4 p-4">
